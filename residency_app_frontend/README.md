@@ -1,6 +1,6 @@
 # Residency Manager (React, Local-only)
 
-A lightweight React frontend for a residency management app. There is **no backend**—all resident data is stored locally on the user's device.
+A lightweight React frontend for a residency management app (light theme with **orange** primary accents). There is **no backend**—all resident data is stored locally on the user's device.
 
 ## Features
 

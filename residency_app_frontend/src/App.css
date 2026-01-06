@@ -6,8 +6,11 @@
   --text-muted: #6b7280;
   --border: #e5e7eb;
 
-  --primary: #3b82f6;
-  --primary-600: #2563eb;
+  /* Orange primary palette */
+  --primary: #f97316; /* base */
+  --primary-600: #ea580c; /* hover / pressed */
+
+  /* Keep existing success/error semantics (do not tie to primary) */
   --success: #06b6d4;
   --error: #ef4444;
 
@@ -17,7 +20,8 @@
   --radius: 14px;
   --radius-sm: 10px;
 
-  --focus: 0 0 0 3px rgba(59, 130, 246, 0.25);
+  /* Focus ring tuned for orange on light surfaces */
+  --focus: 0 0 0 3px rgba(249, 115, 22, 0.30);
 }
 
 * {
@@ -31,7 +35,8 @@ body {
 
 .App {
   min-height: 100vh;
-  background: linear-gradient(180deg, rgba(59, 130, 246, 0.08), #f9fafb 45%);
+  /* Replace blue tint with a subtle orange tint */
+  background: linear-gradient(180deg, rgba(249, 115, 22, 0.10), #f9fafb 45%);
   color: var(--text);
 }
 
@@ -81,6 +86,7 @@ a {
   width: 34px;
   height: 34px;
   border-radius: 10px;
+  /* Keep the gradient mark, but make orange the primary accent */
   background: linear-gradient(135deg, var(--primary), var(--success));
   box-shadow: var(--shadow-sm);
 }
@@ -214,7 +220,7 @@ a {
 
 .btnPrimary {
   background: var(--primary);
-  border-color: rgba(59, 130, 246, 0.7);
+  border-color: rgba(249, 115, 22, 0.72);
   color: #ffffff;
 }
 
@@ -271,7 +277,7 @@ a {
 .input:focus,
 .select:focus,
 .textarea:focus {
-  border-color: rgba(59, 130, 246, 0.65);
+  border-color: rgba(249, 115, 22, 0.70);
   box-shadow: var(--focus);
 }
 
@@ -360,7 +366,8 @@ a {
 }
 
 .table tbody tr:hover td {
-  background: rgba(59, 130, 246, 0.04);
+  /* subtle orange hover */
+  background: rgba(249, 115, 22, 0.05);
 }
 
 .pagination {
@@ -468,6 +475,7 @@ a {
   height: 10px;
   border-radius: 999px;
   margin-top: 5px;
+  /* Default/info toast dot follows primary accent */
   background: var(--primary);
 }
 
